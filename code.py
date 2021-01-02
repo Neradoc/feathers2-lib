@@ -50,6 +50,7 @@ while True:
         # Invert the internal LED state every half colour cycle
         fs2.blue_led = not fs2.blue_led
         # Read the ambient light sensor
+        # Trying to guess the actual range of values for the sensor from tests (516-52686)
         print("Ambient light: %.0f%%" % ( (fs2.light-516) / 526.86 ))
     
     if fs2.boot:
